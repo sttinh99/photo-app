@@ -1,7 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Banner from '../../../../components/Banner'
-import Images from '../../../../constants/images'
+// import Banner from '../../../../components/Banner'
+// import Images from '../../../../constants/images'
+import Banner from 'components/Banner';
+import Images from 'constants/images';
+
 import { Container } from 'reactstrap'
 import { Link } from 'react-router-dom'
 

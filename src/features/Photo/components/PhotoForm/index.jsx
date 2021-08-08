@@ -2,9 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Form, FormGroup, Input, Label } from 'reactstrap';
 import Select from 'react-select';
-import { PHOTO_CATEGORY_OPTIONS } from '../../../../constants/global'
-import Images from '../../../../constants/images'
+// import { PHOTO_CATEGORY_OPTIONS } from '../../../../constants/global'
+// import Images from '../../../../constants/images'
 import { Button } from 'reactstrap';
+import { PHOTO_CATEGORY_OPTIONS } from 'constants/global';
+import Images from 'constants/images';
 
 export default function PhotoForm(props) {
     return (
