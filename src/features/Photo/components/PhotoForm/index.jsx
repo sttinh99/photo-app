@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormGroup, Label } from 'reactstrap';
+import { FormGroup, Label, Spinner } from 'reactstrap';
 // import { PHOTO_CATEGORY_OPTIONS } from '../../../../constants/global'
 // import Images from '../../../../constants/images'
 import { Button } from 'reactstrap';
@@ -13,11 +13,8 @@ import RandomPhotoField from 'custom-fields/RandomPhotoField';
 import * as Yup from 'yup'
 
 export default function PhotoForm(props) {
-    const initialValues = {
-        title: '',
-        categoryId: null,
-        photo: '',
-    }
+    console.log(props);
+    const { initialValues, isAddMode } = props
     const validationSchema = Yup.object().shape({
         title: Yup.string().required('this is field required.'),
 
@@ -33,11 +30,11 @@ export default function PhotoForm(props) {
         <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
-            onSubmit={values => console.log("onSubmit", values)}
+            onSubmit={props.onSubmit}
         >
             {formikProps => {
                 //do something here...
-                const { values, errors, touched } = formikProps //một trong số những thứ của formikProps
+                const { values, errors, touched, isSubmitting } = formikProps //một trong số những thứ của formikProps
                 console.log(({ values, errors, touched }));
                 return (
                     <Form>
@@ -67,7 +64,10 @@ export default function PhotoForm(props) {
                             lable="Photo"
                         />
                         <FormGroup>
-                            <Button type="submit" color="primary" >Add to album</Button>
+                            <Button type="submit" color={isAddMode ? "primary" : "success"} >
+                                {isSubmitting && <Spinner />}
+                                {isAddMode ? 'Add to Album' : 'Edit Photo'}
+                            </Button>
                         </FormGroup>
                     </Form>
                 )
@@ -77,8 +77,10 @@ export default function PhotoForm(props) {
 }
 
 PhotoForm.propTypes = {
+    initialValues: PropTypes.object,
     onSubmit: PropTypes.func
 }
 PhotoForm.defaultProps = {
-    onSubmit: null
+    onSubmit: null,
+    initialValues: {}
 }

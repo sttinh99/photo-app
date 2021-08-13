@@ -14,7 +14,7 @@ export default function Photo(props) {
         <Switch>
             <Route exact path={match.url} component={MainPage}></Route>
             <Route exact path={`${match.url}/add`} component={AddEditPage}></Route>
-            <Route exact path={`${match.url}/:photoId`} component={MainPage}></Route>
+            <Route exact path={`${match.url}/:photoId`} component={AddEditPage}></Route>
             <Route component={NotFound}></Route>
         </Switch>
     );

@@ -9,9 +9,10 @@ export default function RandomPhotoField(props) {
     const { name, value, onBlur } = field
     const { errors, touched } = form
     const showError = errors[name] && touched[name]
+    // console.log(showError, errors, touched);
     const handleImageUrlChange = (newImageUrl) => {
-        console.log('2');
-        console.log(name, newImageUrl);
+        // console.log('2');
+        // console.log(name, newImageUrl);
         form.setFieldValue(name, newImageUrl)
     }
 
@@ -28,6 +29,7 @@ export default function RandomPhotoField(props) {
             {/* nay la components minh viet nen minh chua ho tro classname 
             resolve them thuoc tinh classname hoac dung trict nhu o duoi :)))*/}
             <div className={showError ? 'is-invalid' : ''}></div>
+            {console.log(showError)}
             <ErrorMessage name={name} component={FormFeedback} />
         </FormGroup>
     );
