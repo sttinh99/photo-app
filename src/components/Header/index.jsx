@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Col, Container, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
 import './Header.scss'
@@ -33,8 +32,4 @@ export default function Header() {
             </Container>
         </header>
     );
-}
-
-Header.propTypes = {
-
 }

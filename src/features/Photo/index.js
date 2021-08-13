@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
 
 // import NotFound from '../../components/NotFound';
@@ -20,6 +19,3 @@ export default function Photo(props) {
     );
 }
 
-Photo.propTypes = {
-
-}

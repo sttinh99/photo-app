@@ -1,11 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormGroup, Label, Spinner } from 'reactstrap';
+import { FormGroup, Spinner } from 'reactstrap';
 // import { PHOTO_CATEGORY_OPTIONS } from '../../../../constants/global'
 // import Images from '../../../../constants/images'
 import { Button } from 'reactstrap';
 import { PHOTO_CATEGORY_OPTIONS } from 'constants/global';
-import Images from 'constants/images';
 import { FastField, Form, Formik } from 'formik';
 import InputField from 'custom-fields/InputField';
 import SelectField from 'custom-fields/SelectField';

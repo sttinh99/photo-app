@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 // import Banner from '../../../../components/Banner';
 // import PhotoForm from '../../components/PhotoForm';
 import './AddEdit.scss'
@@ -58,10 +57,6 @@ export default function AddEditPage() {
         </div>
     );
 }
-AddEditPage.propTypes = {
-
-}
-
 const randomNumber = () => {
     console.log((Math.trunc(Math.random() * 99999)));
 }

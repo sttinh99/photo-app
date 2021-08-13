@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 // import Banner from '../../../../components/Banner'
 // import Images from '../../../../constants/images'
 import Banner from 'components/Banner';
@@ -40,6 +39,3 @@ export default function MainPage(props) {
     );
 }
 
-MainPage.propTypes = {
-
-}

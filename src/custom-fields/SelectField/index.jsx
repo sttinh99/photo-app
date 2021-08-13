@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { FormFeedback, FormGroup, Input, Label } from 'reactstrap';
+import { FormFeedback, FormGroup, Label } from 'reactstrap';
 import Select from 'react-select';
 import { ErrorMessage } from 'formik';
 
