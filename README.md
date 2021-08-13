@@ -1,5 +1,5 @@
-# Create Photo-App basis with CRUD
-
+# Create Photo-App basis with CRR
+# Link Demo: sttinh99-photo-app.surge.sh
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
